@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking | NomadNest Travel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<style>
+    /* ===== BOOKING HERO ===== */
+
+    header {
+        width: 100%;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    }
+
+    .navbar {
+        width: 90%;
+        margin: auto;
+        justify-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: #253f76;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: .3s;
+    }
+    .book{
+        display: inline-block;
+        text-decoration: none;
+        background: #10B981;
+        padding: 5px 10px;
+        border-radius: 30px;
+        transition: .3s;
+    }
+    .book:hover{
+        background: #a3147d;
+    }
+    .nav-links a:hover {
+        color: #a3147d;
+    }
+    .booking-hero {
+        height: 45vh;
+        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+            url("../images/booking-banner.jpg");
+        background-image: url(./IMAGES/book.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+
+    .booking-hero h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    /* ===== BOOKING CONTAINER ===== */
+    .booking-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        padding: 80px 10%;
+    }
+
+    /* ===== FORM ===== */
+    .booking-form {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.178);
+    }
+
+    .booking-form h2 {
+        margin-bottom: 20px;
+    }
+
+    .input-box {
+        display: flex;
+        align-items: center;
+        background: #f3f4f6;
+        padding: 12px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .input-box i {
+        color: #2563EB;
+        margin-right: 10px;
+    }
+
+    .input-box input,
+    .input-box select {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    textarea {
+        width: 90%;
+        height: 120px;
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+        background: #f3f4f6;
+        margin-top: 10px;
+        resize: none;
+    }
+
+    .booking-form button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 15px;
+        background: #10B981;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .booking-form button:hover {
+        background: #2563EB;
+    }
+
+    /* ===== SUMMARY ===== */
+    .booking-summary {
+        background: #eef4ff;
+        padding: 30px;
+        border-radius: 20px;
+        height: fit-content;
+    }
+
+    .summary-box {
+        margin-top: 20px;
+        line-height: 2;
+        color: #333;
+    }
+
+    .note {
+        margin-top: 20px;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #444;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    footer {
+        background: #24365d;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+    .back{
+        background: rgba(227, 158, 150, 0.765);
+    }
+    .summary{
+        background: #46b4d3bc;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:900px) {
+
+        .booking-container {
+            grid-template-columns: 1fr;
+        }
+
+        .booking-hero h1 {
+            font-size: 35px;
+        }
+
+    }
+</style>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">
+                NomadNest Travel
+            </h1>
+            <div class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="packages.html">Packages</a></li>
+
+                <li><a href="blog.html">Blog</a></li>
+
+                <li><a href="booking.html" class="book" style="color: white;">Booking</a></li>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="booking-hero">
+        <h1>Book Your Dream Trip</h1>
+        <p>Fill the form below and start your journey with NomadNest</p>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section class="booking-container">
+
+        <!-- FORM -->
+        <form class="booking-form back" >
+
+            <h2>Booking Details</h2>
+
+            <div class="input-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Full Name" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa fa-envelope"></i>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa fa-phone"></i>
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa fa-map-marker"></i>
+                <select>
+                    <option>Select Destination</option>
+                    <option>Somalia</option>
+                    <option>Dubai</option>
+                    <option>Turkey</option>
+                    <option>Switzerland</option>
+                    <option>Maldives</option>
+                    <option>Kenya</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <i class="fa fa-briefcase"></i>
+                <select>
+                    <option>Select Package</option>
+                    <option>Basic</option>
+                    <option>Standard</option>
+                    <option>Premium</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <i class="fa fa-calendar"></i>
+                <input type="date" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa fa-users"></i>
+                <input type="number" placeholder="Number of Travelers" required>
+            </div>
+
+            <textarea placeholder="Special Requests"></textarea>
+
+            <button type="submit">Confirm Booking</button>
+
+        </form>
+
+        <!-- SUMMARY BOX -->
+        <div class="booking-summary summary">
+
+            <h2>Booking Summary</h2>
+
+            <div class="summary-box">
+
+                <p><strong>Company:</strong> NomadNest Travel</p>
+                <p><strong>Support:</strong> 24/7 Available</p>
+                <p><strong>Secure Booking:</strong> Yes</p>
+                <p><strong>Instant Confirmation:</strong> Yes</p>
+
+            </div>
+
+            <div class="note">
+                <i class="fa fa-info-circle"></i>
+                Your booking will be reviewed and confirmed within 24 hours.
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 NomadNest Travel. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<title>Home | NomadNest Travel</title>
+
+<style>
+    /* ===== GOOGLE FONT ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    /* ===== RESET ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #f8fafc;
+        color: #333;
+    }
+
+    /* ===== NAVBAR ===== */
+
+    header {
+        width: 100%;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    }
+
+
+    .navbar {
+        width: 90%;
+        margin: auto;
+        justify-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: #253f76;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: .3s;
+    }
+
+    .book {
+        display: inline-block;
+        text-decoration: none;
+        background: #10B981;
+        padding: 5px 10px;
+        border-radius: 30px;
+        transition: .3s;
+    }
+
+    .book:hover {
+        background: #a3147d;
+    }
+
+    .nav-links a:hover {
+        color: #a3147d;
+    }
+
+    /* ===== HERO ===== */
+
+    .hero {
+        height: 90vh;
+        background: linear-gradient(rgb(13, 47, 88)),
+            url("./IMAGES/explore.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero {
+        background-image: url(./IMAGES/explore1.jpg);
+    }
+
+    .hero-content {
+        color: #fff;
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.7;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        margin-top: 35px;
+        text-decoration: none;
+        background: #10B981;
+        color: #fff;
+        padding: 15px 35px;
+        border-radius: 30px;
+        transition: .3s;
+    }
+
+    .hero-btn:hover {
+        background: #a3147d;
+    }
+
+    /* ===== COMMON SECTION ===== */
+
+    section {
+        padding: 80px 10%;
+    }
+
+    section h2 {
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 50px;
+        color: #1c4b8d;
+    }
+
+    /* ===== CARDS ===== */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.361);
+        transition: .4s;
+        text-align: center;
+    }
+
+    .card:hover {
+        transform: translateY(-20px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        margin: 20px 0 10px;
+    }
+
+    .card p {
+        color: #666;
+        padding: 0 20px 20px;
+    }
+
+    .card a {
+        display: inline-block;
+        margin-bottom: 25px;
+        background: #1d469f;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 28px;
+        border-radius: 30px;
+    }
+
+    /* ===== WHY CHOOSE US ===== */
+
+    .why {
+        background: #ccdaf4;
+    }
+
+    .why-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        text-align: center;
+    }
+
+    .why-box div {
+        background: #fff;
+        padding: 40px;
+        border-radius: 15px;
+    }
+
+    .why-box i {
+        font-size: 45px;
+        color: #205ee4;
+        margin-bottom: 20px;
+    }
+
+    /* ===== NEWSLETTER ===== */
+
+    .newsletter {
+        text-align: center;
+    }
+
+    .newsletter p {
+        margin: 15px 0 30px;
+    }
+
+    .newsletter input {
+        width: 350px;
+        max-width: 90%;
+        padding: 15px;
+        border: 1px solid #797979;
+        border-radius: 30px;
+        outline: none;
+    }
+
+    .newsletter button {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        background: #10B981;
+        color: #fff;
+        cursor: progress;
+        margin-left: 10px;
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer {
+        background: #24365d;
+        color: #fff;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .most {
+        border: 3px solid #f59e0b;
+        transform: scale(1.05);
+    }
+    .most .badge {
+        position:relative;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #f59e0b;
+        color: white;
+        padding: 3px 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @media(max-width:768px) {
+
+        .navbar {
+            flex-direction: row;
+        }
+
+        .nav-links {
+            flex-direction: row;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .hero-content h1 {
+            font-size: 38px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+        }
+
+        .newsletter button {
+            margin-top: 15px;
+        }
+
+    }
+</style>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <h1 class="logo">
+                NomadNest Travel
+            </h1>
+            <div class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="packages.html">Packages</a></li>
+
+                <li><a href="blog.html">Blog</a></li>
+
+                <li><a href="booking.html" class="book" style="color: white;">Booking</a></li>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Explore the World with NomadNest</h1>
+
+            <p>
+                Discover beautiful destinations, unforgettable adventures,
+                and affordable travel packages.
+            </p>
+
+            <a href="packages.html" class="hero-btn">
+                Explore Tours
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="destination">
+
+        <h2>Popular Destinations</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img src="dubai.jpg">
+
+                <h3>Dubai</h3>
+
+                <p>Luxury travel experience.</p>
+
+            </div>
+
+            <div class="card">
+
+                <img src="turkey.jpg">
+
+                <h3>Turkey</h3>
+
+                <p>Historic cities and amazing food.</p>
+
+            </div>
+
+            <div class="card">
+
+                <img src="switzerland.jpg">
+
+                <h3>Switzerland</h3>
+
+                <p>Snowy mountains and nature.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="packages">
+
+        <h2>Tour Packages</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Basic</h3>
+
+                <h1>$299</h1>
+
+                <p>3 Days Tour</p>
+
+                <p>Hotel Included</p>
+
+                <p>Breakfast</p>
+
+                <a href="booking.html">Book Now</a>
+
+            </div>
+
+            <div class="card most">
+                <div class="badge">Default</div>
+
+                <h3>Standard</h3>
+
+                <h1>$599</h1>
+
+                <p>7 Days Tour</p>
+
+                <p>Hotel Included</p>
+
+                <p>Airport Pickup</p>
+
+                <a href="booking.html">Book Now</a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Premium</h3>
+
+                <h1>$999</h1>
+
+                <p>14 Days Tour</p>
+
+                <p>Luxury Hotel</p>
+
+                <p>Tour Guide</p>
+
+                <a href="booking.html">Book Now</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="why">
+
+        <h2>Why Choose Us?</h2>
+
+        <div class="why-box">
+
+            <div>
+
+                <i class="fa-solid fa-plane"></i>
+
+                <h3>Easy Booking</h3>
+
+                <p>Book your dream trip quickly.</p>
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-earth-africa"></i>
+
+                <h3>Worldwide Tours</h3>
+
+                <p>Explore destinations across the globe.</p>
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Best Services</h3>
+
+                <p>Professional travel assistance.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="newsletter">
+
+        <h2>Subscribe</h2>
+
+        <p>Receive our latest travel offers.</p>
+
+        <input type="email" placeholder="Enter your email">
+
+        <button>Subscribe</button>
+
+    </section>
+
+    <footer>
+
+        <p>
+
+            © 2026 NomadNest Travel.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

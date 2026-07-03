@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog | NomadNest Travel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<style>
+    /* ===== BLOG HERO ===== */
+
+    header {
+        width: 100%;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    }
+
+    .navbar {
+        width: 90%;
+        margin: auto;
+        justify-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: #253f76;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: .3s;
+    }
+    .book{
+        display: inline-block;
+        text-decoration: none;
+        background: #10B981;
+        padding: 5px 10px;
+        border-radius: 30px;
+        transition: .3s;
+    }
+    .book:hover{
+        background: #a3147d;
+    }
+
+    .nav-links a:hover {
+        color: #a3147d;
+    }
+
+    .blog-hero {
+        height: 35vh;
+        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+            url("../images/blog-banner.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        background-image: url(./IMAGES/blogtop.jpg);
+    }
+
+    .blog-hero h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    /* ===== FEATURED POST ===== */
+    .featured-post {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 80px 10%;
+        align-items: center;
+    }
+
+    .featured-image img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+    }
+
+    .featured-content .tag {
+        background: #f59e0b;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 15px;
+    }
+
+    .featured-content h2 {
+        margin: 15px 0;
+    }
+
+    .featured-content p {
+        color: #555;
+        line-height: 1.8;
+    }
+
+    .featured-content a {
+        display: inline-block;
+        margin-top: 10px;
+        background: #2563EB;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+    }
+
+    /* ===== BLOG GRID ===== */
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 10% 80px;
+    }
+
+    .blog-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.185);
+        transition: .3s;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-15px);
+    }
+
+    .blog-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .blog-content {
+        padding: 20px;
+    }
+
+    .tag {
+        background: #10B981;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+
+    .blog-content h3 {
+        margin: 10px 0;
+    }
+
+    .blog-content p {
+        color: #666;
+    }
+
+    .meta {
+        font-size: 12px;
+        color: #888;
+        margin-top: 10px;
+    }
+
+    .blog-content a {
+        display: inline-block;
+        margin-top: 15px;
+        color: #1dc241;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    footer {
+        background: #24365d;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:900px) {
+
+        .featured-post {
+            grid-template-columns: 1fr;
+        }
+
+        .blog-hero h1 {
+            font-size: 35px;
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">
+                NomadNest Travel
+            </h1>
+            <div class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="packages.html">Packages</a></li>
+
+                <li><a href="blog.html">Blog</a></li>
+
+                <li><a href="booking.html" class="book" style="color: white;">Booking</a></li>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="blog-hero">
+        <h1>Travel Blog</h1>
+        <p>Tips, guides & stories from around the world</p>
+    </section>
+
+    <!-- FEATURED POST -->
+    <section class="featured-post">
+
+        <div class="featured-image">
+            <img src="blog.jpg" alt="">
+        </div>
+
+        <div class="featured-content">
+
+            <span class="tag">Featured</span>
+
+            <h2>Top 10 Travel Destinations in 2026</h2>
+
+            <p>
+                Discover the most amazing places you must visit this year.
+                From tropical beaches to snowy mountains, explore it all.
+            </p>
+
+            <p class="meta">
+                <i class="fa fa-user"></i> Admin &nbsp; | &nbsp;
+                <i class="fa fa-calendar"></i> June 2026
+            </p>
+
+            <a href="blog.html">Read More</a>
+
+        </div>
+
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="blog-grid">
+
+        <!-- CARD 1 -->
+        <div class="blog-card">
+
+            <img src="./IMAGES/tips.jpg">
+
+            <div class="blog-content">
+
+                <span class="tag">Tips</span>
+
+                <h3>How to Travel on a Budget</h3>
+
+                <p>Learn how to save money while traveling the world.</p>
+
+                <p class="meta">Admin • June 2026</p>
+
+                <a href="packages.html">Read More</a>
+
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="blog-card">
+
+            <img src="./IMAGES/guide.jpg">
+
+            <div class="blog-content">
+
+                <span class="tag">Guide</span>
+
+                <h3>Best Beaches in Maldives</h3>
+
+                <p>Explore crystal clear waters and luxury resorts.</p>
+
+                <p class="meta">Admin • June 2026</p>
+
+                <a href="packages.html">Read More</a>
+
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="blog-card">
+
+            <img src="./IMAGES/adventure.jpg">
+
+            <div class="blog-content">
+
+                <span class="tag">Adventure</span>
+
+                <h3>Safari Experience in Kenya</h3>
+
+                <p>Wildlife adventures you will never forget.</p>
+
+                <p class="meta">Admin • June 2026</p>
+
+                <a href="packages.html">Read More</a>
+
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="blog-card">
+
+            <img src="./IMAGES/topcity.jpg">
+
+            <div class="blog-content">
+
+                <span class="tag">Travel</span>
+
+                <h3>Top Cities to Visit in Europe</h3>
+
+                <p>Discover the beauty of European culture and history.</p>
+
+                <p class="meta">Admin • June 2026</p>
+
+                <a href="packages.html">Read More</a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 NomadNest Travel. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

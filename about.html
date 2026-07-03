@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | NomadNest Travel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<style>
+    /*================ ABOUT PAGE ================*/
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    header {
+        width: 100%;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    }
+
+    .navbar {
+        width: 90%;
+        margin: auto;
+        justify-items: center;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: #253f76;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: .3s;
+    }
+
+    .nav-links a:hover {
+        color: #a3147d;
+    }
+
+    .book{
+        display: inline-block;
+        text-decoration: none;
+        background: #10B981;
+        padding: 5px 10px;
+        border-radius: 30px;
+        transition: .3s;
+    }
+    .book:hover{
+        background: #a3147d;
+    }
+
+    div button:hover {
+        background: #a3147d;
+    }
+
+    .about-hero {
+        height: 35vh;
+        color: #fff;
+        background: linear-gradient(rgb(209, 114, 41), rgb(45, 208, 223)),
+            url("../images/packages-banner.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+    .about-hero h1 {
+
+        font-size: 60px;
+        margin-bottom: 20px;
+
+    }
+
+    .about-hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.7;
+    }
+
+     div button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        background: #10B981;
+        color: #fff;
+        cursor: progress;
+        margin-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .about-image img {
+
+        width: 500px;
+
+        border-radius: 20px;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+
+    }
+
+    .about-text-who {
+
+        padding: 5px 3px;
+        margin-bottom: 15px;
+        margin-top: 3px;
+    }
+
+    .about-text h2 {
+
+        margin-bottom: 20px;
+
+    }
+
+    .about-text p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: auto;
+        margin-bottom: 20px;
+        line-height: 1.7;
+        color: #2b2b2b;
+
+    }
+
+    .mission {
+
+        background: #eef4ff;
+
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+        gap: 30px;
+
+    }
+
+    .mission-card {
+
+        background: white;
+        overflow: hidden;
+        transition: .4s;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+        margin-top: 20px;
+
+    }
+
+    .mission-card:hover {
+        transform: translateY(-20px);
+    }
+
+    .mission-card i {
+
+        font-size: 45px;
+
+        color: #2563EB;
+
+        margin-bottom: 20px;
+
+    }
+
+    .team h2{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .hanu img{
+        position: absolute;
+        float: left;
+        display: flex;
+        margin: 50px 50px 50px 0;
+        width: 170px;
+        height: 170px;
+        margin-top: -10px;
+        border-radius: 10px;
+        margin-left: 3px;
+    }
+    .hanu p{
+        margin-left: 175px;
+    }
+
+    .hanu h3{
+        margin-top: 70px;
+        margin-left: 175px;
+    }
+
+    .siraji img {
+        margin-top: -10px;
+        float: left;
+        display: flex;
+        margin-right: 3px;
+        border-radius: 20px;
+        margin-left: 3px;
+    }
+
+    .siraaji p{
+        gap: 30px;
+        text-align:left;
+        padding: 7px;
+    }
+    .siraji h3{
+        margin-top: 20px;
+    }
+
+    footer {
+        margin-top: 40px;
+        background: #24365d;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    @media(max-width:768px) {
+
+        .navbar {
+            flex-direction: row;
+        }
+
+        .nav-links {
+            flex-direction: row;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .about {
+
+            flex-direction: column;
+
+        }
+
+        .about-image img {
+
+            width: 100%;
+
+        }
+
+        .about-hero h1 {
+
+            font-size: 38px;
+
+        }
+
+    }
+</style>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <h1 class="logo">
+                NomadNest Travel
+            </h1>
+            
+            <div class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="packages.html">Packages</a></li>
+
+                <li><a href="blog.html">Blog</a></li>
+
+                <li><a href="booking.html" class="book" style="color: white;">Booking</a></li>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="about-hero">
+
+        <div>
+
+            <h1>About NomadNest Travel</h1>
+
+            <p>
+                Creating unforgettable travel experiences around the world.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="about">
+
+        <div class="about-text-who">
+
+            <h2>Who We Are</h2>
+
+            <p>
+
+                NomadNest Travel is a modern travel company dedicated to helping
+                travelers discover amazing destinations, book affordable tours,
+                and create unforgettable memories.
+
+            </p>
+
+            <p>
+
+                Since our establishment, we have served thousands of travelers
+                through carefully planned vacations, luxury tours, and adventure trips.
+
+            </p>
+
+            <a href="packages.html" class="hero-btn">
+                <button class="button-ex">
+                    Explore Packages
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="mission">
+
+        <div class="mission-card">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <h3>Mission</h3>
+
+            <p>
+
+                To make travel affordable, enjoyable, and accessible for everyone.
+
+            </p>
+
+        </div>
+
+        <div class="mission-card">
+
+            <i class="fa-solid fa-eye"></i>
+
+            <h3>Vision</h3>
+
+            <p>
+
+                To become one of the world's most trusted travel companies.
+
+            </p>
+
+        </div>
+
+        <div class="mission-card">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <h3>Values</h3>
+
+            <p>
+
+                Quality Service, Integrity, Innovation, Customer Satisfaction.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="team">
+
+        <h2>Meet Our Team</h2>
+
+        <div class="cards">
+
+            <div class="card siraji">
+
+                <img src="siraji.jpg" style="height: 170px; width: 170px;">
+
+                <h3>Name: Ali Ahmed Ali</h3>
+
+                <p><b style="color: #2563EB;">CEO & Founder </b></p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;"> ID: </b>C1250527</p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Student: </b>at JUST</p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Foculty:  </b>Computer Science</p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Depart:  </b>Computer Application</p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Class:  </b>CA251 </p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Attendance number: </b>75 </p>
+
+            </div>
+
+            <div class="hanu">
+
+                <img src="hanu.jpg">
+
+                <h3>Name: Hanu Yonis Ahmed</h3>
+
+                <p><b style="color:#2563EB;">Tour Manager </b></p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;"> ID: </b>C1250523</p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Student: </b>at JUST</p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Foculty:  </b>Computer Science</p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Depart:  </b>Computer Application</p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Class:  </b>CA251 </p>
+                <p><b style="font-family: Arial, Helvetica, sans-serif;">Attendance number: </b>72 </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+
+            © 2026 NomadNest Travel.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

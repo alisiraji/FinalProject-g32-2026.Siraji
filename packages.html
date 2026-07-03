@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Packages | NomadNest Travel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<style>
+    /* ===== PACKAGE HERO ===== */
+
+     header {
+        width: 100%;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    }
+
+    .navbar {
+        width: 90%;
+        margin: auto;
+        justify-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: #253f76;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: .3s;
+    }
+    .book{
+        display: inline-block;
+        text-decoration: none;
+        background: #10B981;
+        padding: 5px 10px;
+        border-radius: 30px;
+        transition: .3s;
+    }
+    .book:hover{
+        background: #a3147d;
+    }
+
+    .nav-links a:hover {
+        color: #a3147d;
+    }
+    
+    .package-hero {
+        height: 45vh;
+        background: linear-gradient(rgba(230, 62, 62, 0.826), rgba(109, 219, 31, 0.6)),
+            url("../images/packages-banner.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        background-image: url(./IMAGES/pack.jpg);
+        border-radius: 15px;
+    }
+
+    .package-hero h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    /* ===== PACKAGES SECTION ===== */
+    .packages {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 80px 10%;
+    }
+
+    .package-card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+        transition: .3s;
+        position: relative;
+    }
+
+    .package-card:hover {
+        transform: translateY(-20px);
+    }
+
+    .package-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .package-card h2 {
+        color: #2563EB;
+        font-size: 40px;
+        margin: 10px 0;
+    }
+
+    .duration {
+        color: #777;
+        margin-bottom: 15px;
+    }
+
+    .package-card ul {
+        list-style: none;
+        text-align: left;
+        margin: 20px 0;
+    }
+
+    .package-card ul li {
+        margin: 10px 0;
+        color: #444;
+    }
+
+    .package-card i {
+        color: #10B981;
+        margin-right: 8px;
+    }
+
+    .package-card a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: #10B981;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    .package-card a:hover {
+        background: #1284c1;
+    }
+
+    /* ===== POPULAR PACKAGE ===== */
+    .popular-package {
+        border: 3px solid #f59e0b;
+        transform: scale(1.05);
+    }
+
+    .popular-package .badge {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #f59e0b;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    footer {
+        background: #24365d;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+
+</style>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">
+                NomadNest Travel
+            </h1>
+            <div class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="packages.html">Packages</a></li>
+
+                <li><a href="blog.html">Blog</a></li>
+
+                <li><a href="booking.html" class="book" style="color: white;">Booking</a></li>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="package-hero">
+        <h1>Choose Your Perfect Package</h1>
+        <p>Affordable and luxury travel packages for every traveler</p>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="packages">
+
+        <!-- BASIC -->
+        <div class="package-card">
+
+            <div class="package-title">Basic</div>
+
+            <h2>$299</h2>
+
+            <p class="duration">3 Days / 2 Nights</p>
+
+            <ul>
+                <li><i class="fa fa-check"></i> Hotel Accommodation</li>
+                <li><i class="fa fa-check"></i> Breakfast Included</li>
+                <li><i class="fa fa-check"></i> Airport Pickup</li>
+            </ul>
+
+            <a href="booking.html" style="margin-top: 80px;">Book Now</a>
+
+        </div>
+
+        <!-- STANDARD -->
+        <div class="package-card popular-package">
+
+            <div class="badge">Most Popular</div>
+
+            <div class="package-title">Standard</div>
+
+            <h2>$599</h2>
+
+            <p class="duration">7 Days / 6 Nights</p>
+
+            <ul>
+                <li><i class="fa fa-check"></i> 4-Star Hotel</li>
+                <li><i class="fa fa-check"></i> Breakfast & Dinner</li>
+                <li><i class="fa fa-check"></i> Guided Tours</li>
+                <li><i class="fa fa-check"></i> Airport Pickup</li>
+            </ul>
+
+            <a href="booking.html" style="margin-top: 40px;">Book Now</a>
+
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="package-card">
+
+            <div class="package-title">Premium</div>
+
+            <h2>$999</h2>
+
+            <p class="duration">14 Days / 13 Nights</p>
+
+            <ul>
+                <li><i class="fa fa-check"></i> 5-Star Luxury Hotel</li>
+                <li><i class="fa fa-check"></i> All Meals Included</li>
+                <li><i class="fa fa-check"></i> Private Guide</li>
+                <li><i class="fa fa-check"></i> VIP Transport</li>
+                <li><i class="fa fa-check"></i> Special Activities</li>
+            </ul>
+
+            <a href="booking.html">Book Now</a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 NomadNest Travel. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
